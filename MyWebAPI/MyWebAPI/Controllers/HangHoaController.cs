@@ -10,7 +10,7 @@ namespace MyWebAPI.Controllers
     public class HangHoaController : ControllerBase
     {
         public static List<HangHoa> hangHoas = new List<HangHoa>();
-        
+
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -59,7 +59,7 @@ namespace MyWebAPI.Controllers
                 {
                     return NotFound($"Hang hoa with ID {id} not found.");
                 }
-                if(id != hanghoa.MaHangHoa.ToString())
+                if (id != hanghoa.MaHangHoa.ToString())
                 {
                     return BadRequest();
                 }
@@ -92,5 +92,6 @@ namespace MyWebAPI.Controllers
             {
                 return BadRequest();
             }
+        }
     }
 }
